@@ -947,7 +947,7 @@ header .hello svg text {
 }
 
 header .hello svg {
-  animation: scaling 2s ease infinite alternate;
+  animation: scaling 5s ease infinite alternate;
 }
 
 @keyframes scaling {
