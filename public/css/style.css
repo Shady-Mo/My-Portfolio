@@ -678,10 +678,6 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.font-openSans{
-  font-family: "open sans", sans-serif;
-}
-
 .font-sora{
   font-family: "sora", sans-serif;
 }
@@ -869,7 +865,7 @@ header .container .headline .icon h2 span {
 }
 
 header .container .headline ul li a {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 1.1rem;
   position: relative;
   padding: 5px 0;
