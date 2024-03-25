@@ -1,4 +1,15 @@
 $(document).ready(function() {
+    function loading() {
+        let headline = document.querySelector("header .container .headline");
+        let upScroll = document.querySelector("header .scrolling a .up-scroll");
+        if (headline.getBoundingClientRect().bottom < 0) {
+            upScroll.classList.add("show");
+        }
+        else {
+            upScroll.classList.remove("show");
+        }
+    }
+
     function findCssRule(selectorString) {
         // helper function searches through the document stylesheets looking for selectorString
         // will also recurse through sub-rules (such as rules inside media queries)
@@ -30,19 +41,10 @@ $(document).ready(function() {
 
     function startAnimation() {
         let timeline = gsap.timeline();
-        timeline.from('.container .headline', {duration: 2, y: '-200%', ease: 'bounce.out'});
-        timeline.from('.container .headline .links li', {duration: 2, opacity: 0, stagger: 0.5});
+        timeline.from('header .container .headline', {duration: 2, y: '-200%', ease: 'bounce.out'});
+        timeline.from('header .container .headline .links li', {duration: 2, opacity: 0, stagger: 0.5});
     }
     startAnimation();
-
-    $("header .container .info .image").on({
-        mouseenter: function() {
-            $("header .container .info .image .border").animate({rotate: "270deg", ease: "linear"}, 500)
-        },
-        mouseleave: function() {
-            $("header .container .info .image .border").animate({rotate: "0deg", ease: "linear"}, 500)
-        },
-    });
 
     function autoTyping() {
         var typed = new Typed(".auto-type", {
@@ -53,4 +55,18 @@ $(document).ready(function() {
         });
     }
     setTimeout(autoTyping, 2000);
+
+    $(window).scroll(function() {
+        let headline = document.querySelector("header .container .headline");
+        let upScroll = document.querySelector("header .scrolling a .up-scroll");
+        if (headline.getBoundingClientRect().bottom < 0) {
+            upScroll.classList.add("show");
+        }
+        else {
+            if (upScroll.classList.contains("show")) {
+                upScroll.classList.remove("show");
+            }
+        }
+    });
+    setTimeout(loading, 500);
 });

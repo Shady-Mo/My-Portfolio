@@ -19,10 +19,15 @@
 }
 
 :root {
+   --primary-color: #5102c9;
+   --secondary-color: rgb(31, 22, 100);
    --neon-color: #00ffee;
    --light-black: #131313;
    --light-gray: #484848;
    --wave-color: #03a9f4;
+   --light-white: #f6f4ff;
+   --gradient-90: linear-gradient(90deg, #00ccff, #d500f9);
+   --gradient-180: linear-gradient(#00ccff, #d500f9);
    --theme-primary: #2a1454;
    --theme-secondary: #8750f7;
 }
@@ -46,12 +51,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-   background: rgb(31, 22, 100);
+   background: var(--secondary-color);
    border-radius: 5px;
 }
 
 ::-webkit-scrollbar-track {
-   background-color: #5102c9;
+   background-color: var(--primary-color);
 }
 
 /* End Global Rules */
@@ -85,7 +90,7 @@ header .bg img {
 }
 
 .custom-shape-divider-bottom-1711275511 .shape-fill {
-   fill: #FFFFFF;
+   fill: var(--light-white);
 }
 
 @keyframes wave {
@@ -157,6 +162,7 @@ header .container .headline ul li a {
    font-weight: 400;
    font-size: 1.1rem;
    position: relative;
+   transition: 0.3s;
    padding: 10px 0;
 }
 
@@ -167,13 +173,17 @@ header .container .headline ul li a::after {
    border-radius: 4px;
    left: 0;
    bottom: 7px;
-   background: rgb(91,28,205);
-   /* background: linear-gradient(90deg, rgba(91,28,205,1) 0%, rgba(174,104,104,1) 100%); */
-   background: linear-gradient(90deg, #00ccff, #d500f9);
+   background: var(--gradient-90);
    position: absolute;
    transition: 0.3s;
    transform-origin: left;
    transform: scaleX(0);
+}
+
+header .container .headline ul li:hover a {
+   background: var(--gradient-90);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
 }
 
 header .container .headline ul li:hover a::after { 
@@ -238,6 +248,10 @@ header .hello svg {
 
 /* Start Data */
 
+header .headline {
+   /* background-color: blue; */
+}
+
 header .container .info .data h1 {
    font-weight: bold;
    font-size: 3.6rem;
@@ -250,14 +264,14 @@ header .container .info .data h2 {
 }
 
 header .container .info .data h1 span {
-   background: linear-gradient(90deg, #00ccff, #d500f9);
+   background: var(--gradient-90);
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
 }
 
 header .container .info .data h2 span {
    position: relative;
-   background: linear-gradient(90deg, #00ccff, #d500f9);
+   background: var(--gradient-90);
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
 }
@@ -280,8 +294,8 @@ header .container .info .data .links .social-links a {
 }
 
 header .container .info .data .links .social-links a:hover {
-   background: #5102c9;
-   border-color: #5102c9;
+   background: var(--primary-color);
+   border-color: var(--primary-color);
 }
 
 header .container .info .data .links button {
@@ -292,8 +306,8 @@ header .container .info .data .links button {
 }
 
 header .container .info .data .links a button:hover {
-   background: #5102c9;
-   border-color: #5102c9;
+   background: var(--primary-color);
+   border-color: var(--primary-color);
 }
 
 /* End Data */
@@ -308,7 +322,7 @@ header .container .info {
 header .container .info .image {
    position: relative;
    transform: rotate(4deg);
-   transition: 0.3s;
+   transition: 0.5s;
    border-radius: 15px;
    overflow: hidden;
    padding: 5px;
@@ -319,13 +333,18 @@ header .container .info .image .border {
    width: 250px;
    height: 150%;
    transform: rotate(45deg);
-   background: linear-gradient(#00ccff, #d500f9);
+   background: var(--gradient-180);
    position: absolute;
    z-index: -1;
+   transition: 0.5s;
 }
 
 header .container .info .image:hover {
    transform: rotate(0);
+}
+
+header .container .info .image:hover .border {
+   transform: rotate(315deg);
 }
 
 header .container .info .image .box {
@@ -337,4 +356,50 @@ header .container .info .image .box {
 
 /* End Info */
 
+/* Start Up Scroll */
+
+header .scrolling a .up-scroll {
+   height: 45px;
+   width: 45px;
+   border-radius: 50%;
+   border: solid 2px var(--primary-color);
+   right: 40px;
+   bottom: 25px;
+   opacity: 0;
+   transition: 0.3s;
+   z-index: 9999999;
+}
+
+header .scrolling a .up-scroll:hover {
+   background-color: var(--primary-color);
+}
+
+header .scrolling a .up-scroll.show {
+   opacity: 1;
+   bottom: 40px;
+}
+
+header .scrolling a .up-scroll svg {
+   color: var(--primary-color);
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   transition: 0.3s;
+}
+
+header .scrolling a .up-scroll:hover svg {
+   color: var(--light-white);
+}
+
+/* End Up Scroll */
+
 /* End Header */
+
+/* Start Main */
+
+main {
+   background-color: var(--light-white);
+}
+
+/* End Main */
