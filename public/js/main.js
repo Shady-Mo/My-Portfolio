@@ -31,16 +31,31 @@ $(document).ready(function() {
     function startAnimation() {
         let timeline = gsap.timeline();
         timeline.from('.container .headline', {duration: 2, y: '-200%', ease: 'bounce.out'});
-        timeline.from('.container .headline .links li', {duration: 2, opacity: 0, stagger: 0.5})
+        timeline.from('.container .headline .links li', {duration: 2, opacity: 0, stagger: 0.5});
+        // gsap.from('header .container .info .data .links .social-links a', {duration: 2, opacity: 0, stagger: 0.5});
     }
     startAnimation();
 
     $("header .container .info .image").on({
         mouseenter: function() {
-            $("header .container .info .image .border").animate({rotate: "360deg", ease: "linear"}, 500)
+            $("header .container .info .image .border").animate({rotate: "270deg", ease: "linear"}, 500)
         },
         mouseleave: function() {
             $("header .container .info .image .border").animate({rotate: "0deg", ease: "linear"}, 500)
         },
+    });
+
+    function autoTyping() {
+        var typed = new Typed(".auto-type", {
+            strings: ["Software Engineer", "Front-End Developer", "Competitive Programmer"],
+            typeSpeed: 40,
+            backSpeed: 40,
+            loop: true,
+        });
+    }
+    setTimeout(autoTyping, 2000);
+
+    $(window).scroll(function() {
+        console.log($(this).scrollY);
     });
 });

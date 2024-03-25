@@ -108,14 +108,45 @@
 
          <div class="container">
             <div class="info flex justify-between">
-               <div class="data">
+               <div class="data flex flex-col justify-around">
                   <h1>I am <span>Shady</span></h1>
-                  <h2>I am a <span></span></h2>
+                  <h2>I am a <span class="auto-type"></span></h2>
+                  <div class="links flex gap-7 items-center">
+                     <a href="My_Resume.pdf" target="_blank" download="My_Resume">
+                        <button class="flex items-center gap-[6px]">
+                           <div class="text">Download CV</div>
+                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                           </svg>                            
+                        </button>
+                     </a>
+                     <div class="social-links flex gap-4">
+                        <a href="https://www.linkedin.com/in/shady-mohamed-122437262/" title="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100016184046326" title="facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://github.com/Shady-Mo" title="github"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://codeforces.com/profile/Shady_Mo" title="codeforces">
+                           <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                              viewBox="0 0 1366 768" style="enable-background:new 0 0 1366 768;" xml:space="preserve">
+                           <style type="text/css">
+                              .social-links svg {
+                                 .st0{fill:#FFFFFF;};
+                              }
+                           </style>
+                           <path class="st0" d="M998.32,366.74H884.04c-18.9,0-34.22,15.32-34.22,34.22v233.54c0,18.9,15.32,34.22,34.22,34.22h114.28
+                              c18.9,0,34.22-15.32,34.22-34.22V400.96C1032.54,382.06,1017.22,366.74,998.32,366.74z"/>
+                           <path class="st0" d="M738.49,668.73H624.22c-18.9,0-34.22-15.32-34.22-34.22V133.49c0-18.9,15.32-34.22,34.22-34.22h114.28
+                              c18.9,0,34.22,15.32,34.22,34.22v501.01C772.71,653.41,757.39,668.73,738.49,668.73z"/>
+                           <path class="st0" d="M478.76,668.73H370.88c-18.85,0-34.13-15.28-34.13-34.13V286.98c0-18.85,15.28-34.13,34.13-34.13h107.88
+                              c18.85,0,34.13,15.28,34.13,34.13V634.6C512.89,653.45,497.61,668.73,478.76,668.73z"/>
+                           </svg>
+                        </a>
+                     </div>
+                  </div>
                </div>
                <div class="image mr-10 flex justify-center items-center">
                   <div class="border"></div>
                   <div class="box">
-                     <img src="./public/images/my-image.jpg" alt="" width="350" height="350">
+                     <img src="./public/images/my-image.jpg" alt="" width="330" height="330">
                   </div>
                </div>
             </div>
@@ -125,6 +156,10 @@
       <main class="h-svh bg-white">
          
       </main>
+      
+      <!-- Auto Typing File -->
+      <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+      <!-- Main JS File -->
       <script src="./public/js/main.js"></script>
    </body>
 </html>
