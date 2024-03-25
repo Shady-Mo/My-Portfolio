@@ -106,6 +106,7 @@ header .bg img {
 header .slider {
    z-index: 999999;
    top: 0;
+   background-color: var(--secondary-color);
    display: none;
 }
 
