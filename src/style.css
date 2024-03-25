@@ -32,7 +32,7 @@ html {
 }
 
 .container {
-   @apply px-5 py-3 m-auto;
+   @apply px-[30px] py-[12px] m-auto;
 }
 
 body {
@@ -108,7 +108,6 @@ header .container .headline .icon {
    display: flex;
    gap: 15px;
    align-items: center;
-   width: 50%;
    user-select: none;
 }
 
