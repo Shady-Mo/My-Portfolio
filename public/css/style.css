@@ -692,6 +692,7 @@ video {
 :root {
   --primary-color: #5102c9;
   --secondary-color: rgb(31, 22, 100);
+  --bg-color: linear-gradient(90deg, #1f1470 , #05014b);
   --neon-color: #00ffee;
   --light-black: #131313;
   --light-gray: #484848;
@@ -781,7 +782,7 @@ header .bg img {
 header .slider {
   z-index: 999999;
   top: 0;
-  background-color: var(--secondary-color);
+  background: var(--bg-color);
   display: none;
 }
 
@@ -951,10 +952,6 @@ header .hello svg {
 /* Start Info */
 
 /* Start Data */
-
-header .headline {
-  /* background-color: blue; */
-}
 
 header .container .info .data h1 {
   font-weight: bold;
