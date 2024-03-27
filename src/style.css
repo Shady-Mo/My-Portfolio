@@ -60,9 +60,31 @@ body {
    background-color: var(--primary-color);
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+   :root {
+      font-size: 15px;
+   }
+}
+
+@media (max-width: 767px) {
+   :root {
+      font-size: 14px;
+   }
+}
+
+@media (max-width: 600px) {
+   :root {
+      font-size: 12px;
+   }
+}
+
 /* End Global Rules */
 
 /* Start Header */
+
+header {
+   position: relative;
+}
 
 /* Start Background */
 
@@ -100,6 +122,12 @@ header .bg img {
    }
 }
 
+@media (max-width: 767px) {
+   .custom-shape-divider-bottom-1711275511 svg {
+      height: 0;
+   }
+}
+
 /* End Background */
 
 /* Start Headline */
@@ -109,6 +137,10 @@ header .slider {
    top: 0;
    background: var(--bg-color);
    display: none;
+}
+
+header .container .headline {
+   position: relative;
 }
 
 header .container .headline .icon {
@@ -153,6 +185,8 @@ header .container .headline .icon h2 {
    width: max-content;
    text-align: center;
    font-weight: bold;
+   font-size: 24px;
+   line-height: 32px;
 }
 
 header .container .headline .icon h2 span {
@@ -160,7 +194,59 @@ header .container .headline .icon h2 span {
    letter-spacing: -2px;
 }
 
-header .container .headline ul li a {
+header .container .headline .links-container {
+   height: 25px;
+   display: flex;
+   align-items: center;
+}
+
+header .container .headline .links-container .nav-icon {
+   height: 100%;
+   width: 40px;
+   display: none;
+   flex-direction: column;
+   align-items: end;
+   justify-content: space-between;
+   position: relative;
+   transition: 0.3s;
+}
+
+header .container .headline .links-container .nav-icon.show {
+   transform: rotate(45deg);
+   transition: 0.3s 0.4s;
+}
+
+header .container .headline .links-container .nav-icon span {
+   display: block;
+   height: 3px;
+   background-color: white;
+   transition: 0.3s;
+}
+
+header .container .headline .links-container .nav-icon span:nth-child(1) {
+   width: 35px;
+}
+
+header .container .headline .links-container .nav-icon span:nth-child(2) {
+   width: 40px;
+}
+
+header .container .headline .links-container .nav-icon span:nth-child(3) {
+   width: 30px;
+}
+
+header .container .headline .links-container .nav-icon span:nth-child(1).show,
+header .container .headline .links-container .nav-icon span:nth-child(3).show {
+   width: 0 !important;
+   transition: 0.3s;
+}
+
+header .container .headline .links-container .nav-icon span:last-of-type.show {
+   height: 40px !important;
+   transition: 0.3s 0.2s;
+}
+
+header .container .headline .links-container ul li a {
    font-weight: 400;
    font-size: 1.1rem;
    position: relative;
@@ -168,7 +254,7 @@ header .container .headline ul li a {
    padding: 10px 0;
 }
 
-header .container .headline ul li a::after {
+header .container .headline .links-container ul li a::after {
    content: '';
    width: 100%;
    height: 2px;
@@ -182,13 +268,13 @@ header .container .headline ul li a::after {
    transform: scaleX(0);
 }
 
-header .container .headline ul li:hover a {
+header .container .headline .links-container ul li:hover a {
    background: var(--gradient-90);
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
 }
 
-header .container .headline ul li:hover a::after { 
+header .container .headline .links-container ul li:hover a::after { 
    transform: scaleX(1);
 }
 
@@ -244,21 +330,55 @@ header .hello svg {
    }
 }
 
+@media (max-width: 767px) {
+   header .container .headline .links-container .nav-icon {
+      display: flex;
+      cursor: pointer;
+   }
+
+   header .container .headline .links-container ul {
+      display: none;
+   }
+
+   header .container .headline .links-container .nav-icon span:last-of-type {
+      display: block;
+      width: 3px;
+      height: 0;
+      top: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+   }
+}
+
+@media (max-width: 600px) {
+   header .container .headline .icon h2 {
+      font-size: 20px;
+   }
+}
+
 /* End Headline */
 
 /* Start Info */
 
 /* Start Data */
 
+header .container .info .data {
+   width: 55%;
+   line-height: 1.6;
+   font-size: 1rem;
+}
+
 header .container .info .data h1 {
    font-weight: bold;
-   font-size: 3.6rem;
+   font-size: 3.6em;
    margin: 0;
+   line-height: 1;
 }
 
 header .container .info .data h2 {
    font-weight: 400;
-   font-size: 1.8rem;
+   font-size: 1.8em;
 }
 
 header .container .info .data h1 span {
@@ -279,6 +399,10 @@ header .container .info .data .links {
    border-radius: 2.1rem;
 }
 
+header .container .info .data .links .social-links {
+   flex-wrap: wrap;
+}
+
 header .container .info .data .links .social-links a {
    height: 40px;
    width: 40px;
@@ -286,7 +410,7 @@ header .container .info .data .links .social-links a {
    justify-content: center;
    align-items: center;
    border-radius: 50%;
-   font-size: 1.1rem;
+   font-size: 1.1em;
    border: solid 2px white;
    transition: 0.3s;
 }
@@ -301,11 +425,47 @@ header .container .info .data .links button {
    padding: 1.05em 2.1em;
    border-radius: 2.1rem;
    transition: 0.3s;
+   width: max-content;
 }
 
 header .container .info .data .links a button:hover {
    background: var(--primary-color);
    border-color: var(--primary-color);
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+   header .container .info .data {
+      font-size: 0.9em;
+   }
+
+   header .container .info .data h2 {
+      font-size: 1.6em;
+   }
+
+   header .container .info .data .links {
+      flex-direction: column;
+      gap: 20px;
+   }
+
+   header .container .info .data .links .social-links a {
+      width: 35px;
+      height: 35px;
+   }
+}
+
+@media (max-width: 767px) {
+   header .container .info .data {
+      width: 100%;
+      text-align: center;
+      gap: 20px;
+   }
+}
+
+@media (max-width: 600px) {
+   header .container .info .data .links {
+      flex-direction: column;
+      gap: 20px;
+   }
 }
 
 /* End Data */
@@ -350,9 +510,87 @@ header .container .info .image .box {
    overflow: hidden;
 }
 
+header .container .info .image .box img {
+   width: 330px;
+   height: 440px;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+   header .container .info .image {
+      margin-right: 15px;
+      padding: 4px;
+   }
+
+   header .container .info .image .box img {
+      width: 270px;
+      height: 360px;
+   }
+}
+
 /* End Image */
 
+@media (max-width: 767px) {
+   header .container .info {
+      flex-direction: column;
+      align-items: center;
+      gap: 35px;
+      margin-top: 20px;
+   }
+
+   header .container .info .image {
+      width: fit-content;
+      padding: 3px;
+      margin: auto;
+   }
+
+   header .container .info .data .links {
+      margin: auto;
+   }
+
+   header .container .info .image .box img {
+      width: 230px;
+      height: 310px;
+   }
+}
+
 /* End Info */
+
+/* Start Overlay */
+
+header .overlay {
+   position: fixed;
+   top: 80px;
+   left: 0;
+   background-color: var(--primary-color);
+   width: 100%;
+   padding: 20px;
+   height: calc(100% - 80px);
+   transform: scaleY(0);
+   transition: 0.3s;
+   transform-origin: top;
+}
+
+header .overlay.show {
+   transform: scaleY(1);
+   transition: 0.3s;
+}
+
+header .overlay ul {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   font-size: 25px;
+   text-transform: uppercase;
+}
+
+header .overlay ul li {
+   padding-bottom: 40px;
+   text-align: center;
+   width: 100%;
+   cursor: pointer;
+}
+
+/* End Overlay */
 
 /* Start Up Scroll */
 
@@ -388,6 +626,7 @@ header .scrolling a .up-scroll svg {
 
 header .scrolling a .up-scroll:hover svg {
    color: var(--light-white);
+   transform: translate(-50%, -50%) rotate(360deg);
 }
 
 /* End Up Scroll */

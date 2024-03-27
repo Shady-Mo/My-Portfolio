@@ -12,8 +12,8 @@ $(document).ready(function() {
         }
 
         let slider = document.querySelector("header .slider");
-        let infoImage = document.querySelector("header .container .info .image");
-        if (infoImage.getBoundingClientRect().bottom < 0 && open) {
+        let header = document.querySelector("header");
+        if (header.getBoundingClientRect().bottom <= 0 && open) {
             t2.clear();
             t1.to(slider, {y: 0, duration: 1, ease: 'bounce.out'});
         }
@@ -55,15 +55,18 @@ $(document).ready(function() {
     function startAnimation() {
         let timeline = gsap.timeline();
         timeline.from('header .container .headline', {duration: 2, y: '-200%', ease: 'bounce.out'});
-        timeline.from('header .container .headline .links li', {duration: 2, opacity: 0, stagger: 0.5});
+        timeline.from('header .container .headline .links-container ul li', {duration: 2, opacity: 0, stagger: 0.5});
     }
     startAnimation();
 
     function autoTyping() {
         var typed = new Typed(".auto-type", {
-            strings: ["Software Engineer", "Front-End Developer", "Competitive Programmer"],
+            strings: ["Software Engineer", "Front-End Developer", "Competitive Programmer",
+            "Student in 3rd Year of the Faculty of Computers and Artificial Intelligince @Benha University",
+            "Student in Computer Science Department",
+            "Trainer for AI Model @Scale AI (Remotly)"],
             typeSpeed: 40,
-            backSpeed: 40,
+            backSpeed: 20,
             loop: true,
         });
     }
@@ -87,4 +90,27 @@ $(document).ready(function() {
         slider.setProperty("display", "block");
         open = true;
     }, 2000);
+
+    function showHideOverlay() {
+        if ($("header .overlay").hasClass("show")) {
+            $("header .overlay").removeClass("show")
+        }
+        else {
+            $("header .overlay").addClass("show")
+        }
+        if ($("header .container .headline .links-container .nav-icon span").hasClass("show")) {
+            $("header .container .headline .links-container .nav-icon").removeClass("show");
+            $("header .container .headline .links-container .nav-icon span").removeClass("show");
+        }
+        else {
+            $("header .container .headline .links-container .nav-icon").addClass("show");
+            $("header .container .headline .links-container .nav-icon span").addClass("show");
+        }
+    }
+    $("header .container .headline .links-container .nav-icon").click(showHideOverlay);
+    $("header .overlay ul li").click(showHideOverlay);
+    $("header .overlay ul li").click(function(event) {
+        let element = event.target;
+        document.querySelector(`${element.dataset.scroll}`).scrollIntoView({behavior: "smooth"})
+    });
 });

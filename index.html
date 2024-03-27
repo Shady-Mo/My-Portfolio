@@ -57,17 +57,25 @@
                   </div>
                   <h2 class="text-2xl">Shady <span>Mohamed</span></h2>
                </div>
-               <ul class="links flex gap-7">
-                  <li><a href="#header">Home</a></li>
-                  <li><a href="#about">About</a></li>
-                  <li><a href="#resume">Resume</a></li>
-                  <li><a href="#skills">Skills</a></li>
-                  <li><a href="#contact">Contact</a></li>
-               </ul>
+               <div class="links-container">
+                  <div class="nav-icon">
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                  </div>
+                  <ul class="flex gap-7">
+                     <li><a href="#header">Home</a></li>
+                     <li><a href="#about">About</a></li>
+                     <li><a href="#resume">Resume</a></li>
+                     <li><a href="#skills">Skills</a></li>
+                     <li><a href="#contact">Contact</a></li>
+                  </ul>
+               </div>
             </div>
          </div>
 
-         <div class="slider bg-black fixed w-[100%]">
+         <div class="slider fixed w-[100%]">
             <div class="container">
                <div class="headline flex justify-between items-center">
                   <div class="icon">
@@ -93,13 +101,21 @@
                      </div>
                      <h2 class="text-2xl">Shady <span>Mohamed</span></h2>
                   </div>
-                  <ul class="links flex gap-7">
-                     <li><a href="#header">Home</a></li>
-                     <li><a href="#about">About</a></li>
-                     <li><a href="#resume">Resume</a></li>
-                     <li><a href="#skills">Skills</a></li>
-                     <li><a href="#contact">Contact</a></li>
-                  </ul>
+                  <div class="links-container">
+                     <div class="nav-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                     </div>
+                     <ul class="flex gap-7">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#resume">Resume</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                     </ul>
+                  </div>
                </div>
             </div>
          </div>
@@ -152,10 +168,20 @@
                <div class="image mr-10 flex justify-center items-center">
                   <div class="border"></div>
                   <div class="box">
-                     <img src="./public/images/my-image.jpg" alt="" width="330" height="330">
+                     <img src="./public/images/my-image.jpg" alt="">
                   </div>
                </div>
             </div>
+         </div>
+
+         <div class="overlay">
+            <ul>
+               <li data-scroll="header">Home</li>
+               <li data-scroll="about">About</li>
+               <li data-scroll="resume">Resume</li>
+               <li data-scroll="skills">Skills</li>
+               <li data-scroll="contact">Contact</li>
+            </ul>
          </div>
 
          <div class="scrolling">
