@@ -92,19 +92,18 @@ $(document).ready(function() {
     }, 2000);
 
     function showHideOverlay() {
+        let body = findCssRule("body");
         if ($("header .overlay").hasClass("show")) {
+            $("header .container .headline .links-container .nav-icon").removeClass("show");
+            $("header .container .headline .links-container .nav-icon span").removeClass("show");
             $("header .overlay").removeClass("show")
+            body.removeProperty("overflow");
         }
         else {
             $("header .overlay").addClass("show")
-        }
-        if ($("header .container .headline .links-container .nav-icon span").hasClass("show")) {
-            $("header .container .headline .links-container .nav-icon").removeClass("show");
-            $("header .container .headline .links-container .nav-icon span").removeClass("show");
-        }
-        else {
             $("header .container .headline .links-container .nav-icon").addClass("show");
             $("header .container .headline .links-container .nav-icon span").addClass("show");
+            body.setProperty("overflow", "hidden");
         }
     }
     $("header .container .headline .links-container .nav-icon").click(showHideOverlay);
