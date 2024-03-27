@@ -1240,7 +1240,7 @@ header .container .info .image .box img {
   header .container .info .image {
     width: -moz-fit-content;
     width: fit-content;
-    padding: 3px;
+    padding: 4px;
     margin: auto;
   }
 
@@ -1262,7 +1262,7 @@ header .overlay {
   position: fixed;
   top: 80px;
   left: 0;
-  background-color: var(--primary-color);
+  background: linear-gradient(90deg, #1f1470 , #05014b);
   width: 100%;
   padding: 20px;
   height: calc(100% - 80px);
