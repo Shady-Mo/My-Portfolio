@@ -583,7 +583,7 @@ header .container .info .image .box img {
 
 @media (max-width: 767px) {
    header .container .info {
-      flex-direction: column;
+      flex-direction: column-reverse;
       align-items: center;
       gap: 35px;
       margin-top: 20px;
