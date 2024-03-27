@@ -644,10 +644,6 @@ header .scrolling a .up-scroll {
    z-index: 9999999;
 }
 
-header .scrolling a .up-scroll:hover {
-   background-color: var(--primary-color);
-}
-
 header .scrolling a .up-scroll.show {
    opacity: 1;
    bottom: 40px;
@@ -665,7 +661,6 @@ header .scrolling a .up-scroll svg {
 }
 
 header .scrolling a .up-scroll:hover svg {
-   color: var(--light-white);
    transform: translate(-50%, -50%) rotate(360deg);
 }
 

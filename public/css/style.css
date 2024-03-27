@@ -600,20 +600,12 @@ video {
   height: 1.25rem;
 }
 
-.h-6{
-  height: 1.5rem;
-}
-
 .h-svh{
   height: 100svh;
 }
 
 .w-5{
   width: 1.25rem;
-}
-
-.w-6{
-  width: 1.5rem;
 }
 
 .w-\[100\%\]{
@@ -1345,10 +1337,6 @@ header .scrolling a .up-scroll {
   z-index: 9999999;
 }
 
-header .scrolling a .up-scroll:hover {
-  background-color: var(--primary-color);
-}
-
 header .scrolling a .up-scroll.show {
   opacity: 1;
   bottom: 40px;
@@ -1366,7 +1354,6 @@ header .scrolling a .up-scroll svg {
 }
 
 header .scrolling a .up-scroll:hover svg {
-  color: var(--light-white);
   transform: translate(-50%, -50%) rotate(360deg);
 }
 
