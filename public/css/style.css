@@ -762,7 +762,7 @@ header {
 
 header .bg img {
   position: absolute;
-  height: 100%;
+  height: 150%;
   width: 100%;
   z-index: -9999;
 }
@@ -1169,6 +1169,10 @@ header .container .info .data .links a button:hover {
 }
 
 @media (max-width: 600px) {
+  header .container .info .data h2 {
+    font-size: 1.5em;
+  }
+
   header .container .info .data .links {
     flex-direction: column;
     gap: 20px;
