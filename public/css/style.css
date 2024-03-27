@@ -762,7 +762,7 @@ header {
 
 header .bg img {
   position: absolute;
-  height: 150%;
+  height: 100%;
   width: 100%;
   z-index: -9999;
 }
