@@ -754,6 +754,8 @@ body {
 
 header {
   position: relative;
+  height: 100vh;
+  height: 100svh;
 }
 
 /* Start Background */
@@ -761,6 +763,7 @@ header {
 header .bg img {
   position: absolute;
   height: 150%;
+  width: 100%;
   z-index: -9999;
 }
 
@@ -1299,6 +1302,7 @@ header .overlay {
   transform: scaleY(0);
   transition: 0.3s;
   transform-origin: top;
+  z-index: 99999999;
 }
 
 header .overlay.show {
