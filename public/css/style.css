@@ -1245,7 +1245,7 @@ header .container .info .image .box img {
   header .container .info .image {
     width: -moz-fit-content;
     width: fit-content;
-    padding: 4px;
+    padding: 3px;
     margin: auto;
   }
 
@@ -1254,8 +1254,8 @@ header .container .info .image .box img {
   }
 
   header .container .info .image .box img {
-    width: 230px;
-    height: 310px;
+    width: 200px;
+    height: 280px;
   }
 }
 
