@@ -660,6 +660,8 @@ header .scrolling a .up-scroll svg {
    top: 50%;
    transform: translate(-50%, -50%);
    transition: 0.3s;
+   width: 24px;
+   height: 24px;
 }
 
 header .scrolling a .up-scroll:hover svg {
