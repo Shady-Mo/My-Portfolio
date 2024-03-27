@@ -667,6 +667,8 @@ header .scrolling a .up-scroll:hover svg {
 
 main {
    background-color: var(--light-white);
+   height: 100vh;
+   height: 100svh;
 }
 
 /* End Main */
