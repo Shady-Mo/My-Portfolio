@@ -1166,6 +1166,11 @@ header .container .info .data .links a button:hover {
     flex-direction: column;
     gap: 20px;
   }
+
+  header .container .info .data .links .social-links a {
+    width: 35px;
+    height: 35px;
+  }
 }
 
 /* End Data */
