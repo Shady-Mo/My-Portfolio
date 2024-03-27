@@ -1159,6 +1159,10 @@ header .container .info .data .links a button:hover {
     text-align: center;
     gap: 20px;
   }
+
+  header .container .info .data .links {
+    margin: auto;
+  }
 }
 
 @media (max-width: 600px) {
@@ -1230,6 +1234,43 @@ header .container .info .image .box img {
     width: 270px;
     height: 360px;
   }
+
+  header .container .info .image .border {
+    width: 220px;
+  }
+}
+
+@media (max-width: 767px) {
+  header .container .info .image {
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 4px;
+    margin: auto;
+  }
+
+  header .container .info .image .border {
+    width: 200px;
+  }
+
+  header .container .info .image .box img {
+    width: 230px;
+    height: 310px;
+  }
+}
+
+@media (max-width: 600px) {
+  header .container .info .image {
+    padding: 3px;
+  }
+
+  header .container .info .image .box img {
+    width: 180px;
+    height: 240px;
+  }
+
+  header .container .info .image .border {
+    width: 150px;
+  }
 }
 
 /* End Image */
@@ -1240,22 +1281,6 @@ header .container .info .image .box img {
     align-items: center;
     gap: 35px;
     margin-top: 20px;
-  }
-
-  header .container .info .image {
-    width: -moz-fit-content;
-    width: fit-content;
-    padding: 3px;
-    margin: auto;
-  }
-
-  header .container .info .data .links {
-    margin: auto;
-  }
-
-  header .container .info .image .box img {
-    width: 200px;
-    height: 280px;
   }
 }
 
