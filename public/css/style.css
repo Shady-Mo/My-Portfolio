@@ -1150,6 +1150,12 @@ header .container .info .data .links a button:hover {
     width: 35px;
     height: 35px;
   }
+
+  header .container .info .data .links .social-links img {
+    height: 16px;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1161,6 +1167,16 @@ header .container .info .data .links a button:hover {
 
   header .container .info .data .links {
     margin: auto;
+  }
+
+  header .container .info .data .links .social-links a {
+    font-size: 1.25em;
+  }
+
+  header .container .info .data .links .social-links img {
+    height: 19px;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }
 
@@ -1177,6 +1193,12 @@ header .container .info .data .links a button:hover {
   header .container .info .data .links .social-links a {
     width: 35px;
     height: 35px;
+  }
+
+  header .container .info .data .links .social-links img {
+    height: 17px;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }
 
